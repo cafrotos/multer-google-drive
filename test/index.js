@@ -51,10 +51,10 @@ describe("Multer google drive", () => {
       assert.equal(req.file.fieldname, 'file')
       assert.equal(req.file.originalname, 'photo.jpg')
       
-      let isUpload = fs.existsSync(path.join(__dirname, 'upload-folder', 'photo.jpg'))
+      let isUpload = fs.existsSync(path.join(__dirname, 'files', 'upload_photo.jpg'))
       assert.equal(isUpload, true);
-      
-      fs.unlinkSync(path.join(__dirname, 'upload-folder', 'photo.jpg'))
+
+      fs.unlinkSync(path.join(__dirname, 'files', 'upload_photo.jpg'))
       done()
     })
   })
