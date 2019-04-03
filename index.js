@@ -55,7 +55,7 @@ function GoogleDriveStorage(opts) {
   switch (typeof opts.fields) {
     case 'function': this.getFields = opts.fields; break;
     case 'string': this.getFields = staticValue(opts.fields); break;
-    default: this.getFields = staticValue(null);
+    default: this.getFields = staticValue('id');
   }
 }
 
@@ -77,9 +77,9 @@ GoogleDriveStorage.prototype._handleFile = function (req, file, cb) {
 
     this.drive.files.create(params, (err, res) => {
       if(err) return cb(err);
-
+      console.log("res from google ====>", res)
       cb(null, {
-        fileName: res.data.name,
+        fileName: res.data.name || file.originalname,
         fileId: res.data.id
       })
     })
