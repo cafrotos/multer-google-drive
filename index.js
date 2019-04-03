@@ -77,7 +77,6 @@ GoogleDriveStorage.prototype._handleFile = function (req, file, cb) {
 
     this.drive.files.create(params, (err, res) => {
       if(err) return cb(err);
-      console.log("res from google ====>", res)
       cb(null, {
         fileName: res.data.name || file.originalname,
         fileId: res.data.id
