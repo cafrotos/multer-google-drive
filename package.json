@@ -1,13 +1,26 @@
 {
   "name": "multer-google-drive",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Tạo google drive storage cho upload file sử dụng multer.",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
   },
-  "author": "",
+  "keywords": [
+    "multer",
+    "drive-storage",
+    "multer-storage",
+    "drive"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhphuong99/multer-google-drive.git"
+  },
+  "author": "cafrotos",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhphuong99/multer-google-drive/issues"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "form-data": "^2.3.3",
