@@ -1,6 +1,6 @@
 {
   "name": "multer-google-drive",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tạo google drive storage cho upload file sử dụng multer.",
   "main": "index.js",
   "scripts": {

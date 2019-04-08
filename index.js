@@ -78,8 +78,8 @@ GoogleDriveStorage.prototype._handleFile = function (req, file, cb) {
     this.drive.files.create(params, (err, res) => {
       if(err) return cb(err);
       cb(null, {
-        fileName: res.data.name || file.originalname,
-        fileId: res.data.id
+        name: res.data.name || opts.fileName,
+        driveId: res.data.id
       })
     })
   })

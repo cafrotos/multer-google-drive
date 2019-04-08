@@ -34,3 +34,15 @@ app.post('/upload', upload.array('file', 3), function(req, res, next) {
   res.send('Upload thành công ' + req.files.length + ' files!')
 })
 ```
+
+### Tham số
+
+File upload sẽ được lưu theo các tham số của `multer-google-drive`:
+
+Key | Mô tả | Ghi chú
+--- | --- | ---
+`drive` | Object drive tạo từ googleapis | `googleapis`
+`fileName` | Tên của file khi lưu trên google drive | 
+`mimeType` | Kiểu  | `googleapis`
+`parents` | Thư mục gốc trên google drive | `googleapis`
+`fields` | Dữ liệu tham chiếu từ google drive | `googleapis`
